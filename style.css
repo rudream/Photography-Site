@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-main{
+main {
   overflow: hidden;
 }
 
@@ -33,11 +33,11 @@ input[type="checkbox"] {
 html {
   font-size: 62.5%;
   --h1-size: calc(2rem + 1vw);
-  --h2-size: calc(3.5rem + 1vw);
+  --h2-size: calc(4rem + 1vw);
   --h3-size: calc(3rem + 1vw);
   --h4-size: calc(2.4rem + 1vw);
   --text-size: calc(1.5rem + 1vw);
-  --big-size: calc(2.4rem + 1vw);
+  --big-size: calc(8rem + 1vw);
   --maroon-color: #906272;
   --background-color: #414141;
   --primary-color: black;
@@ -91,7 +91,6 @@ p {
   justify-content: center;
   align-items: center;
 }
-
 
 h1 {
   font-family: "Vibes";
@@ -202,10 +201,10 @@ nav {
 .intro p {
   padding: 5rem 10rem;
   margin: 3%;
-  color: var(--secondary-color)
+  color: var(--secondary-color);
 }
 
-.intro h2{
+.intro h2 {
   font-family: "Ruhle-Med";
   font-weight: 600;
 }
@@ -277,41 +276,41 @@ nav {
 
 /* ABOUT SECTION */
 
-.about{
+.about {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap-reverse;
   color: white;
 }
 
-
-.about-text{
+.about-text {
   flex: 2 1 40rem;
   justify-content: space-around;
   background: var(--background-color);
 }
 
-.about-image{
+.about-image {
   flex: 1 1 40rem;
   position: relative;
 }
 
-.about-text div{
+.about-text div {
   padding: 3rem 8rem;
 }
 
-.about-text h3{
+.about-text h3 {
   padding: 2rem 0rem;
-  font-family: "Ruhle-Med";
+  font-family: "Ruhle-Reg";
+  font-weight: 100;
 }
 
-.about-text h2{
+.about-text h2 {
   padding-top: 5rem;
   font-family: "Vibes";
   font-size: 5rem;
 }
 
-.about-image h5{
+.about-image h5 {
   position: absolute;
   letter-spacing: 2rem;
   top: 20%;
@@ -320,7 +319,7 @@ nav {
   color: var(--background-color);
 }
 
-.about-image img{
+.about-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -328,29 +327,29 @@ nav {
 
 /* GALLERY */
 
-.gallery{
+.gallery {
   position: relative;
   display: grid;
   height: 100vh;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.gallery img{
+.gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.gallery1{
+.gallery1 {
   grid-column: 1/3;
 }
 
-.gallery2{
+.gallery2 {
   grid-column: 3/4;
   grid-row: 1/3;
 }
 
-.gallery-head{
+.gallery-head {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -362,6 +361,87 @@ nav {
   font-family: "Ruhle-Med";
   font-weight: 100;
 }
+
+/* CONTACT */
+
+.contact{
+  height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-wrapper{
+  flex: 3 1 40rem;
+  margin: 5rem 0rem;
+}
+
+.form-wrapper h2{
+  font-size: var(--h2-size);
+  font-family: "Ruhle-Med";
+  font-weight: 1000;
+}
+
+.form-wrapper span{
+  font-size: var(--big-size);
+  color: var(--maroon-color);
+}
+
+.contact img{
+  flex: 1 1 40rem;
+}
+
+.form-wrapper label{
+  display: block;
+}
+
+.form-wrapper input{
+  display: block;
+  margin: 3rem 0rem;
+  background: var(--background-color);
+  color: white;
+  border: none;
+  padding: 1rem;
+}
+
+.form-wrapper button{
+  padding: 1rem 8rem;
+  background: var(--maroon-color);
+  color: white;
+  border: none;
+}
+
+/* FOOTER */
+
+footer{
+  height: 10vh;
+  background: var(--background-color);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer ul{
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer img{
+  height: 5vh;
+  object-fit: cover;
+}
+
+footer h4{
+  display: flex;
+  font-size: calc(1.35rem + 1vw);
+  color: white;
+  flex: 3 1 40rem;
+  margin-left: 5vw;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* MEDIA QUERIES */
 
@@ -384,22 +464,25 @@ nav {
     right: 4.2vw;
   }
 
-  .about-text div{
+  .about-text div {
     padding: 3rem 3rem;
   }
 
-  .gallery img{
+  .gallery img {
     grid-row: auto;
     grid-column: auto;
   }
 
-  .gallery{
+  .gallery {
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
 
-  .gallery-head{
+  .gallery-head {
+    display: none;
+  }
+
+  .contact img{
     display: none;
   }
 
 }
-
