@@ -223,7 +223,7 @@ nav {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  max-height: 100vh;
+  height: 100vh;
   object-fit: cover;
 }
 
