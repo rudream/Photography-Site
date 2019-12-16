@@ -235,6 +235,7 @@ nav {
     background: var(--secondary-color);
     margin: 0.5rem 0rem;
     display: block;
+    transition: all 0.5s ease;
   }
 
   .nav-links a {
@@ -271,5 +272,14 @@ nav {
   }
   .menu-check:checked ~ .hamburger span{
     background-color: white;
+  }
+  .menu-check:checked ~ .hamburger span:nth-child(1){
+    transform: rotateZ(45deg) translateY(300%);
+  }
+  .menu-check:checked ~ .hamburger span:nth-child(3){
+    transform: rotateZ(-45deg) translateY(-300%);
+  }
+  .menu-check:checked ~ .hamburger span:nth-child(2){
+    opacity: 0;
   }
 }
