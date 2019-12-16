@@ -8,6 +8,7 @@
 
 input[type="checkbox"] {
   opacity: 0;
+  z-index: 5000;
 }
 
 @font-face {
@@ -132,17 +133,16 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   flex: 2 1 40rem;
+  height: 90vh;
 }
 
 .intro p {
   padding: 5rem 10rem;
-  margin-bottom: 4rem;
+  margin: 3%;
 }
 
-.intro h2 {
-  padding-top: 5rem;
-}
 
 #gallery-button {
   padding: 2rem 8rem;
@@ -236,11 +236,12 @@ nav {
     margin: 0.5rem 0rem;
     display: block;
   }
+
   .nav-links a {
     color: white;
     font-size: var(--h3-size);
-    text-decoration: underline;
   }
+
   .nav-links {
     background: var(--background-color);
     width: 100%;
@@ -250,17 +251,25 @@ nav {
     left: 100%;
     flex-direction: column;
     align-items: center;
+    transition: transform 1s ease;
   }
 
   .menu-check {
-    position: absolute;
-    top: 40%;
-    right: 9%;
-    transform: translate(5%, -50%);
     cursor: pointer;
-    padding: 5rem;
-    transform: scale(3, 2);
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    right: 4.2vw;
   }
+
+  .hamburger{
+    z-index: 500;
+  }
+
   .menu-check:checked + .nav-links {
+    transform: translate(-100%);
+  }
+  .menu-check:checked ~ .hamburger span{
+    background-color: white;
   }
 }
