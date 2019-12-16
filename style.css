@@ -42,6 +42,7 @@ html {
   --background-color: #414141;
   --primary-color: black;
   --secondary-color: #525252;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -148,32 +149,28 @@ nav {
   transition: transform 1s ease;
 }
 
-.menu-check {
-  cursor: pointer;
-  width: 5rem;
-  height: 5rem;
-  position: absolute;
-  right: 4.8vw;
-}
 
 .hamburger {
   z-index: 500;
+  cursor: pointer;
 }
 
-.menu-check:checked + .nav-links {
+.nav-open {
   transform: translate(-100%);
 }
-.menu-check:checked ~ .hamburger span {
-  background-color: white;
-}
-.menu-check:checked ~ .hamburger span:nth-child(1) {
+
+.toggle .line1{
   transform: rotateZ(45deg) translateY(300%);
+  background: white;
 }
-.menu-check:checked ~ .hamburger span:nth-child(3) {
-  transform: rotateZ(-45deg) translateY(-300%);
-}
-.menu-check:checked ~ .hamburger span:nth-child(2) {
+
+.toggle .line2{
   opacity: 0;
+}
+
+.toggle .line3{
+  transform: rotateZ(-45deg) translateY(-300%);
+  background-color: white;
 }
 
 /* HERO */

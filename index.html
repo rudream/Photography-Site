@@ -14,16 +14,15 @@
     <header class="main-head">
       <nav>
         <h1 id="logo">Hugh Jass</h1>
-        <input type="checkbox" class="menu-check" />
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#works">Gallery</a></li>
+          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
         </div>
       </nav>
     </header>
@@ -38,7 +37,7 @@
             Freelance photographer based out of San Francisco specializing in
             model, wedding, and urban photography.
           </p>
-          <a id="gallery-button" href="#works">Gallery</a>
+          <a id="gallery-button" href="#gallery">Gallery</a>
         </div>
         <div class="hero-images">
           <img
@@ -50,7 +49,7 @@
           <img src="./img/plant2.png" alt="plant" class="plant2 plant" />
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="about-image">
           <h5>MINIMAL</h5>
           <img src="./img/about-image.png" alt="portrait-picture" />
@@ -73,17 +72,10 @@
               praesentium cupiditate quidem!
             </p>
           </div>
-          <div class="about-contact">
-            <h3>Get In Touch</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              perferendis deleniti dignissimos velit, modi facilis in explicabo
-              praesentium cupiditate quidem!
-            </p>
           </div>
         </div>
       </section>
-      <section class="gallery">
+      <section class="gallery" id="gallery">
         <h2 class="gallery-head">World-Class Photography</h2>
         <img class="gallery1" src="./img/gallery-1.jpg" alt="man in suit" />
         <img class="gallery2" src="./img/gallery-2.jpg" alt="woman in coat" />
@@ -94,7 +86,7 @@
         />
         <img class="gallery4" src="./img/gallery-4.jpg" alt="woman in jacket" />
       </section>
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="form-wrapper flex">
           <h2>
             Get in <br />
@@ -116,5 +108,6 @@
         <li><a href="https://twitter.com/yassine838"><img src="./img/twitter 1.svg" alt="twitter-icon"></a></li>
       </ul>
     </footer>
+    <script src="./hamburger.js"></script>
   </body>
 </html>
