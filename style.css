@@ -6,19 +6,19 @@
   box-sizing: border-box;
 }
 
-@font-face{
-	font-family: 'Ruhle-Reg';
-	src: url('./fonts/FrankRuhlLibre-Regular.ttf')
+@font-face {
+  font-family: "Ruhle-Reg";
+  src: url("./fonts/FrankRuhlLibre-Regular.ttf");
 }
 
-@font-face{
-	font-family: 'Ruhle-Med';
-	src: url('./fonts/FrankRuhlLibre-Medium.ttf')
+@font-face {
+  font-family: "Ruhle-Med";
+  src: url("./fonts/FrankRuhlLibre-Medium.ttf");
 }
 
-@font-face{
-	font-family: 'Vibes';
-	src: url('./fonts/GreatVibes-Regular.ttf')
+@font-face {
+  font-family: "Vibes";
+  src: url("./fonts/GreatVibes-Regular.ttf");
 }
 
 html {
@@ -35,12 +35,13 @@ html {
   --secondary-color: #525252;
 }
 
-ul{
-	list-style: none;
+ul {
+  list-style: none;
 }
 
-a{
-	text-decoration: none;
+a {
+  text-decoration: none;
+  color: black;
 }
 
 h1 {
@@ -49,6 +50,7 @@ h1 {
 
 h2 {
   font-size: var(--h2-size);
+  font-weight: 500;
 }
 
 h3 {
@@ -64,21 +66,108 @@ li,
 button,
 label,
 input,
+a,
 p {
   font-size: var(--text-size);
 }
 
-.flex{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-body{
-	font-family: "Ruhl";
+body {
+  font-family: "Ruhl";
+  animation: fade-in 1s ease-in-out;
 }
 
-h1{
-	font-family: "Vibes";
+h1 {
+  font-family: "Vibes";
+}
+
+/* NAV */
+
+.main-head {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+nav {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+  padding: 2rem 0rem;
+}
+
+#logo {
+  flex: 1 1 20rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  flex: 1 1 20rem;
+  white-space: nowrap;
+}
+
+.hero {
+  width: 95vw;
+  margin-left: auto;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.intro {
+  flex: 2 1 40rem;
+}
+
+.intro p {
+  padding: 5rem 10rem;
+  margin-bottom: 4rem;
+}
+
+.intro h2 {
+  padding-top: 3rem;
+}
+
+.intro a {
+  padding: 2rem 8rem;
+  border: 3px solid black;
+}
+
+.hero-images {
+  flex: 1 1 40rem;
+  position: relative;
+  min-height: 90vh;
+  background: linear-gradient(#dad8dd, #dad1d4);
+  z-index: -2;
+}
+
+#hero-girl {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.plant {
+  position: absolute;
+  bottom: 0;
+  left: -20%;
+  z-index: -1;
+}
+
+.plant2 {
+  left: 40%;
 }
