@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+main{
+  overflow: hidden;
+}
+
 input[type="checkbox"] {
   opacity: 0;
   z-index: 5000;
@@ -68,7 +72,7 @@ h5 {
 }
 
 body {
-  font-family: "Ruhl-Reg";
+  font-family: "Ruhle-Reg";
   animation: fade-in 1s ease-in-out;
 }
 
@@ -130,7 +134,7 @@ nav {
 .nav-links a {
   color: white;
   font-size: var(--h3-size);
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .nav-links {
@@ -198,6 +202,12 @@ nav {
 .intro p {
   padding: 5rem 10rem;
   margin: 3%;
+  color: var(--secondary-color)
+}
+
+.intro h2{
+  font-family: "Ruhle-Med";
+  font-weight: 600;
 }
 
 #gallery-button {
@@ -208,7 +218,7 @@ nav {
 .hero-images {
   flex: 1 1 40rem;
   position: relative;
-  min-height: 90vh;
+  height: 90vh;
   background: linear-gradient(#dad8dd, #dad1d4);
   z-index: -2;
 }
@@ -217,8 +227,7 @@ nav {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
+  max-height: 100vh;
   object-fit: cover;
 }
 
@@ -266,6 +275,58 @@ nav {
   }
 }
 
+/* ABOUT SECTION */
+
+.about{
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  color: white;
+}
+
+
+.about-text{
+  flex: 2 1 40rem;
+  justify-content: space-around;
+  background: var(--background-color);
+}
+
+.about-image{
+  flex: 1 1 40rem;
+  position: relative;
+}
+
+.about-text div{
+  padding: 3rem 8rem;
+}
+
+.about-text h3{
+  padding: 2rem 0rem;
+  font-family: "Ruhle-Med";
+}
+
+.about-text h2{
+  padding-top: 5rem;
+  font-family: "Vibes";
+  font-size: 5rem;
+}
+
+.about-image h5{
+  position: absolute;
+  letter-spacing: 2rem;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--background-color);
+}
+
+.about-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 842px) {
@@ -280,13 +341,17 @@ nav {
     padding-right: 5rem;
   }
 
-  .intro h2 {
-    padding-top: 7rem;
-  }
+
   .hero-images {
     min-height: 100vh;
   }
   .menu-check {
     right: 4.2vw;
   }
+
+  .about-text div{
+    padding: 3rem 3rem;
+  }
+
 }
+
