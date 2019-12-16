@@ -67,6 +67,11 @@ h5 {
   font-size: var(--h4-size);
 }
 
+body {
+  font-family: "Ruhl-Reg";
+  animation: fade-in 1s ease-in-out;
+}
+
 li,
 button,
 label,
@@ -83,10 +88,6 @@ p {
   align-items: center;
 }
 
-body {
-  font-family: "Ruhl";
-  animation: fade-in 1s ease-in-out;
-}
 
 h1 {
   font-family: "Vibes";
@@ -118,6 +119,62 @@ nav {
   flex: 1 1 20rem;
 }
 
+.hamburger span {
+  padding: 0.2rem 2rem;
+  background: var(--secondary-color);
+  margin: 0.5rem 0rem;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+.nav-links a {
+  color: white;
+  font-size: var(--h3-size);
+  font-weight: 600;
+}
+
+.nav-links {
+  background: var(--background-color);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 1s ease;
+}
+
+.menu-check {
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  right: 4.8vw;
+}
+
+.hamburger {
+  z-index: 500;
+}
+
+.menu-check:checked + .nav-links {
+  transform: translate(-100%);
+}
+.menu-check:checked ~ .hamburger span {
+  background-color: white;
+}
+.menu-check:checked ~ .hamburger span:nth-child(1) {
+  transform: rotateZ(45deg) translateY(300%);
+}
+.menu-check:checked ~ .hamburger span:nth-child(3) {
+  transform: rotateZ(-45deg) translateY(-300%);
+}
+.menu-check:checked ~ .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+/* HERO */
+
 .hero {
   width: 100vw;
   min-height: 90vh;
@@ -142,7 +199,6 @@ nav {
   padding: 5rem 10rem;
   margin: 3%;
 }
-
 
 #gallery-button {
   padding: 2rem 8rem;
@@ -174,6 +230,7 @@ nav {
   animation: plant-entrance 1.5s ease-in-out forwards,
     plant-sway 2.5s infinite alternate-reverse 1.5s;
   transform-origin: bottom;
+  max-height: 80%;
 }
 
 .plant2 {
@@ -229,57 +286,7 @@ nav {
   .hero-images {
     min-height: 100vh;
   }
-
-  .hamburger span {
-    padding: 0.2rem 2rem;
-    background: var(--secondary-color);
-    margin: 0.5rem 0rem;
-    display: block;
-    transition: all 0.5s ease;
-  }
-
-  .nav-links a {
-    color: white;
-    font-size: var(--h3-size);
-  }
-
-  .nav-links {
-    background: var(--background-color);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 100%;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 1s ease;
-  }
-
   .menu-check {
-    cursor: pointer;
-    width: 5rem;
-    height: 5rem;
-    position: absolute;
     right: 4.2vw;
-  }
-
-  .hamburger{
-    z-index: 500;
-  }
-
-  .menu-check:checked + .nav-links {
-    transform: translate(-100%);
-  }
-  .menu-check:checked ~ .hamburger span{
-    background-color: white;
-  }
-  .menu-check:checked ~ .hamburger span:nth-child(1){
-    transform: rotateZ(45deg) translateY(300%);
-  }
-  .menu-check:checked ~ .hamburger span:nth-child(3){
-    transform: rotateZ(-45deg) translateY(-300%);
-  }
-  .menu-check:checked ~ .hamburger span:nth-child(2){
-    opacity: 0;
   }
 }
