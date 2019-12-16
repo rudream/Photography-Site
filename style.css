@@ -1,0 +1,84 @@
+/* GLOBAL STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face{
+	font-family: 'Ruhle-Reg';
+	src: url('./fonts/FrankRuhlLibre-Regular.ttf')
+}
+
+@font-face{
+	font-family: 'Ruhle-Med';
+	src: url('./fonts/FrankRuhlLibre-Medium.ttf')
+}
+
+@font-face{
+	font-family: 'Vibes';
+	src: url('./fonts/GreatVibes-Regular.ttf')
+}
+
+html {
+  font-size: 62.5%;
+  --h1-size: calc(2rem + 1vw);
+  --h2-size: calc(3.5rem + 1vw);
+  --h3-size: calc(3rem + 1vw);
+  --h4-size: calc(2.4rem + 1vw);
+  --text-size: calc(1.5rem + 1vw);
+  --big-size: calc(2.4rem + 1vw);
+  --maroon-color: #906272;
+  --background-color: #414141;
+  --primary-color: black;
+  --secondary-color: #525252;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+h1 {
+  font-size: var(--h1-size);
+}
+
+h2 {
+  font-size: var(--h2-size);
+}
+
+h3 {
+  font-size: var(--h3-size);
+}
+
+h4,
+h5 {
+  font-size: var(--h4-size);
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size: var(--text-size);
+}
+
+.flex{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+body{
+	font-family: "Ruhl";
+}
+
+h1{
+	font-family: "Vibes";
+}
