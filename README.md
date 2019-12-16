@@ -8,4 +8,4 @@ Features:
 
 - Animations
 - Mobile Responsiveness
-- Functional Mobile Hamburger Menu within CSS
+- Functional & Responsive Burger Menu without the use of JS
