@@ -12,4 +12,4 @@ links.forEach(link => {
         nav.classList.toggle("nav-open");
         burger.classList.toggle("toggle");
     })
-})
+}) 
