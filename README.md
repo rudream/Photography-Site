@@ -1,4 +1,4 @@
-# HughJassPhotography
+# Photography Site
 
 Sample portfolio/gallery website for a photographer.
 
